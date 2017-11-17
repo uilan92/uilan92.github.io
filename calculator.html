@@ -21,40 +21,43 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.html">Register</a></li>
+                    <li><a href="indexlogged.html">Welcome (User)</a></li>
+                    <li><a href="createnewpost.html">New post</a></li>
                     <li><a href="calculator.html">Calculator</a></li>
-                    <li><a href="indexlogged.html">Login</a></li>
+                    <li><a href="index.html">Logout</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </header>
 <main>
-    <div class="container body-content span=8 offset=2">
+    <fieldset>
+        <legend>Calculator</legend>
         <form class="form-horizontal">
-            <fieldset>
-                <legend>Login</legend>
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">Email</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">Password</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="Your password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-4 col-sm-offset-4">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <button type="reset" class="btn btn-default">Cancel</button>
-                    </div>
-                </div>
-            </fieldset>
+            <div class="form-group">
+                <label class="col-sm-4 control-label" for="num1">First Number</label>
+                <input type="text" class="form-control" id="num1">
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label" for="num2">Second Number</label>
+                <input type="text" class="form-control" id="num2">
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <input type="button" class="btn btn-primary" onclick="sumNumbers()" value="Calculate">
+            </div>
+            <div class=" col-sm-2 form-control">Result: <span id="result"></span></div>
         </form>
-    </div>
+    </fieldset>
+    <script>
+        function sumNumbers() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+
+            let sum = Number(num1) + Number(num2);
+
+            document.getElementById('result').innerHTML = sum;
+        }
+    </script>
 </main>
 <footer>
     <div class="container modal-footer">
