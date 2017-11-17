@@ -31,6 +31,7 @@
     </div>
 </header>
 <main>
+    <div class="container body-content span=8 offset=2">
     <fieldset>
         <legend>Calculator</legend>
         <form class="form-horizontal">
@@ -45,9 +46,10 @@
             <div class="col-sm-4 col-sm-offset-4">
                 <input type="button" class="btn btn-primary" onclick="sumNumbers()" value="Calculate">
             </div>
-            <div class=" col-sm-2 form-control">Result: <span id="result"></span></div>
+            <div class=" col-sm-4">Result: <span id="result"></span></div>
         </form>
     </fieldset>
+    </div>
     <script>
         function sumNumbers() {
             let num1 = document.getElementById('num1').value;
